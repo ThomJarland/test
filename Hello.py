@@ -16,13 +16,15 @@ import streamlit as st
 from streamlit.logger import get_logger
 import pandas as pd
 
-LOGGER = get_logger(__name__)
+st.title("Votre demande concerne :")
+choice = st.empty()  # Créer un espace vide pour afficher les boutons
 
-DATA_URL = ("https://github.com/ashjdrae/PI2_A5_Equipe_106_Diot_Siaci/blob/main/city.csv")
+if st.button("Appartement"):
+    choice.empty()  # Effacer la question
+    st.title("D'accord")
+    st.write("Vous avez choisi 'Appartement'.")
 
-def load_data(nrows):
-
-    data = pd.read_csv(DATA_URL, nrows=nrows, delimiter=",")
-    return data
-   
-data = load_data(10)
+if st.button("Maison"):
+    choice.empty()  # Effacer la question
+    st.title("D'accord")
+    st.write("Vous avez choisi 'Maison'.")
