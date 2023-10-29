@@ -20,11 +20,21 @@ st.title("Votre demande concerne :")
 choice = st.empty()  # Créer un espace vide pour afficher les boutons
 
 if st.button("Appartement"):
-    choice.empty()  # Effacer la question
-    st.title("D'accord")
-    st.write("Vous avez choisi 'Appartement'.")
+    choice.write("Vous avez choisi : Appartement")
+    st.title("Nouvelle question")
+    new_choice = st.empty()
+
+    if st.button("Résidence principale"):
+        new_choice.write("Vous avez choisi : Résidence principale")
+    if st.button("Résidence secondaire"):
+        new_choice.write("Vous avez choisi : Résidence secondaire")
 
 if st.button("Maison"):
-    choice.empty()  # Effacer la question
-    st.title("D'accord")
-    st.write("Vous avez choisi 'Maison'.")
+    choice.write("Vous avez choisi : Maison")
+    st.title("Nouvelle question")
+    new_choice = st.empty()
+
+    if st.button("Résidence principale"):
+        new_choice.write("Vous avez choisi : Résidence principale")
+    if st.button("Résidence secondaire"):
+        new_choice.write("Vous avez choisi : Résidence secondaire")
