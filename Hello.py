@@ -17,24 +17,26 @@ from streamlit.logger import get_logger
 import pandas as pd
 
 st.title("Votre demande concerne :")
-choice = st.empty()  # Créer un espace vide pour afficher les boutons
+choice_home_type = st.empty()  # Espace vide pour afficher le choix du type de logement
 
 if st.button("Appartement"):
-    choice.write("Vous avez choisi : Appartement")
-    st.title("Nouvelle question")
-    new_choice = st.empty()
+    choice_home_type.write("Vous avez choisi : Appartement")
+
+    st.title("Votre choix de résidence :")
+    choice_residence_type = st.empty()  # Espace vide pour afficher le choix de résidence
 
     if st.button("Résidence principale"):
-        new_choice.write("Vous avez choisi : Résidence principale")
+        choice_residence_type.write("Vous avez choisi : Résidence principale")
     if st.button("Résidence secondaire"):
-        new_choice.write("Vous avez choisi : Résidence secondaire")
+        choice_residence_type.write("Vous avez choisi : Résidence secondaire")
 
 if st.button("Maison"):
-    choice.write("Vous avez choisi : Maison")
-    st.title("Nouvelle question")
-    new_choice = st.empty()
+    choice_home_type.write("Vous avez choisi : Maison")
+
+    st.title("Votre choix de résidence :")
+    choice_residence_type = st.empty()  # Espace vide pour afficher le choix de résidence
 
     if st.button("Résidence principale"):
-        new_choice.write("Vous avez choisi : Résidence principale")
+        choice_residence_type.write("Vous avez choisi : Résidence principale")
     if st.button("Résidence secondaire"):
-        new_choice.write("Vous avez choisi : Résidence secondaire")
+        choice_residence_type.write("Vous avez choisi : Résidence secondaire")
